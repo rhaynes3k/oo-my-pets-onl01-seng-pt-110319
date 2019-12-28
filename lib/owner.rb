@@ -3,6 +3,7 @@ class Owner
   attr_accessor
   attr_reader :name, :species
   @@all = []
+  
   def initialize(name)
     @name = name
     @species = "human"
@@ -15,7 +16,6 @@ class Owner
   
   def say_species
     "I am a human."
-    #binding.pry
   end
   
   def self.all
@@ -32,12 +32,10 @@ class Owner
   
   def cats
     Cat.all.select{|c|c.owner == self}
-    #binding.pry
   end
   
   def dogs
     Dog.all.select{|d|d.owner == self}
-    #binding.pry
   end
   
   def buy_cat(name)

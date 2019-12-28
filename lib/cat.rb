@@ -2,6 +2,7 @@ class Cat
   attr_accessor :owner, :mood
   attr_reader :name
   @@all = []
+  
   def initialize(name, owner)
     @name = name
     @owner = owner
@@ -9,10 +10,8 @@ class Cat
     @@all << self
   end
   
-  
-  
   def self.all
     @@all
-    #binding.pry
   end
+  
 end
